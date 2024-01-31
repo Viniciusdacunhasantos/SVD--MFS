@@ -1,21 +1,10 @@
 function Y = sphemfr(l_max, m_max, th,lam)
-%Adapted from MYSPHHARM   Main subroutine for computing the spherical harmonics.
-%
-% Copyright 2018 by The University of Oxford and The Chebfun Developers.
-% See http://www.chebfun.org/ for Chebfun information.
-
-%%
 % Below is the implementation the Modified Forward Row (MFR) method 
 % described in the Holmes and Featherstones paper (2002)
 % It computes P^m_n/u^m by a stable recurrence to avoid numerical errors
 % near the poles
 
 abs_m_max = abs( m_max );
-
-% Make lam row
-%lam = lam.';
-% Make th vector
-%th = th.';
 
 % Precompute vector cos(th)
 p = length(th);
